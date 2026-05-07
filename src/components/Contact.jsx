@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import resumeFile from "../assets/resume.pdf";
 
 const contactLinks = [
   {
@@ -59,8 +60,11 @@ const Contact = () => {
         >
           <h3>Reach me directly</h3>
           <p>
-            Email: <a className="contact-email" href="mailto:pavansiriginidi@example.com">pavansiriginidi@example.com</a>
+            Email: <a className="contact-email" href="mailto:siriginidipavan@gmail.com">siriginidipavan@gmail.com</a>
           </p>
+          <a className="btn btn-primary resume-btn" href={resumeFile} target="_blank" rel="noreferrer">
+            View Resume
+          </a>
           <p>
             I usually respond fastest through LinkedIn or email.
           </p>

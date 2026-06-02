@@ -12,6 +12,7 @@ const projects = [
     description:
       "It is a Social Media Auto-Posting AI Agent that automatically generates, schedules, and publishes content across multiple platforms. The system integrates AI-driven content creation with API-based automation to reduce manual effort and improve efficiency.",
     image: project2,
+    demo: "",
     tags: ["n8n", "Webhooks", "OpenAI API", "REST API"],
   },
   {
@@ -19,6 +20,7 @@ const projects = [
     description:
       "A Serverless Web Application built on AWS using Lambda, API Gateway, and DynamoDB/S3 for scalable and cost-efficient deployment. The architecture eliminates traditional server management while ensuring high availability and automatic scaling.",
     image: project4,
+    demo: "",
     tags: ["AWS", "AWS Lambda", "AWS DynamoDB"],
   },
   {
@@ -26,6 +28,7 @@ const projects = [
     description:
       "It is an Automated Attendance System using Python and the Buffalo face recognition model that converts uploaded classroom images into embeddings and matches them with stored student data. The system automatically marks students as present or absent with high accuracy.",
     image: project1,
+    demo: "",
     tags: ["Python","Open CV","Buffalo-Model"],
   },
   {
@@ -33,6 +36,7 @@ const projects = [
     description:
       "A React-based e-commerce web application similar to Flipkart that promotes sustainable shopping. It includes an AI chatbot that recommends eco-friendly alternatives and suggests sustainable options when users select plastic products, enhancing user experience and encouraging responsible purchasing.",
     image: project3,
+    demo: "https://ecobuddy-chi.vercel.app/",
     tags: ["React","MongoDB","Node JS","AI Integration(Groq-AI)"],
   },
   {
@@ -40,6 +44,7 @@ const projects = [
     description:
       "Developed a Personal Assistant Automated Agent using n8n that automates email sending, calendar scheduling, and real-time web search via SERP API. It supports both voice and text input, delivering accurate responses through intelligent workflow automation to enhance productivity.",
     image: project5,
+    demo: "",
     tags: ["N8n","Docker","OpenAI API","Webhook","SERP API"],
   },
   {
@@ -47,7 +52,16 @@ const projects = [
     description:
       "I developed a modern and responsive business website using React.js for the frontend. The website is designed to provide a professional online presence for a business, showcasing services, company information, and contact details.",
     image: project6,
+    demo: "",
     tags: ["React","Node JS","Bootstrap"],
+  },
+  {
+    title: "Financial Chat Bot",
+    description:
+      "A Python-based AI financial assistant for students and professionals. It provides personalized budgeting, savings, and financial planning advice through Student and Professional modes. Powered by Groq API with Hugging Face as a backup for reliable AI responses.",
+    image: project7,
+    demo: "https://financhatbot.streamlit.app/",
+    tags: ["Streamlit", "Python", "Hugging Face API", "Groq API"],
   },
 ];
 
@@ -98,6 +112,18 @@ const Projects = () => {
                   </motion.span>
                 ))}
               </div>
+              {project.demo && project.demo.length > 0 && (
+                <div className="project-actions">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-demo-btn"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              )}
             </div>
           </motion.article>
         ))}

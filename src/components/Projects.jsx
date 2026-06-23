@@ -53,7 +53,7 @@ const projects = [
     description:
       "I developed a modern and responsive business website using React.js for the frontend. The website is designed to provide a professional online presence for a business, showcasing services, company information, and contact details.",
     image: project6,
-    demo: "",
+    demo: " https://pavansiriginidi.github.io/nexuslogic/",
     tags: ["React","Node JS","Bootstrap"],
   },
   {

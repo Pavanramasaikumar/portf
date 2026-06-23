@@ -113,8 +113,8 @@ const Projects = () => {
                   </motion.span>
                 ))}
               </div>
-              {project.demo && project.demo.length > 0 && (
-                <div className="project-actions">
+              <div className="project-actions">
+                {project.demo && project.demo.length > 0 ? (
                   <a
                     href={project.demo}
                     target="_blank"
@@ -123,8 +123,16 @@ const Projects = () => {
                   >
                     Live Demo
                   </a>
-                </div>
-              )}
+                ) : (
+                  <button
+                    type="button"
+                    className="project-demo-btn project-demo-btn--disabled"
+                    disabled
+                  >
+                    Demo coming soon
+                  </button>
+                )}
+              </div>
             </div>
           </motion.article>
         ))}
